@@ -1,0 +1,13 @@
+<resources>
+	<string name="app_name">GPS Picker</string>
+	<string name="action_settings">Settings</string>
+	<string name="gps_location">GPS Location</string>
+	<string name="longitude">Longitude:</string>
+	<string name="latitude">Latitude:</string>
+	<string name="best_location">Best Location</string>
+	<string name="network_location">Network Location</string>
+	<string name="zero">0.0000</string>
+	<string name="app_logo">The application logo</string>
+	<string name="gps_picker">GPS Picker</string>
+	<string name="powered_by">Powered by Api-Craft Technology</string>
+</resources>
