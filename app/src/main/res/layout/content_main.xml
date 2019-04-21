@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:tools="http://schemas.android.com/tools"
 		xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,329 +9,337 @@
 		tools:showIn="@layout/activity_main"
 		tools:context=".MainActivity">
 	
-	<LinearLayout
-			android:id="@+id/gps_location_layout"
-			android:orientation="vertical"
-			app:layout_constraintLeft_toLeftOf="parent"
-			app:layout_constraintRight_toRightOf="parent"
-			app:layout_constraintTop_toTopOf="parent"
-			android:padding="@dimen/main_padding"
+	<androidx.constraintlayout.widget.ConstraintLayout
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
-		
-		<TextView
-				android:id="@+id/gps_location_header"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:text="@string/gps_location"
-				android:textAllCaps="true"
-				android:textSize="@dimen/main_header_text_size"
-				android:textStyle="bold"
-				android:padding="@dimen/main_padding"
-				app:layout_constraintLeft_toLeftOf="parent"
-				app:layout_constraintRight_toRightOf="parent"
-				app:layout_constraintTop_toTopOf="parent"/>
+			android:layout_height="wrap_content"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior"
+			tools:showIn="@layout/activity_main"
+			tools:context=".MainActivity">
 		
 		<LinearLayout
-				android:id="@+id/gps_long_location_layout"
-				app:layout_constraintTop_toBottomOf="@+id/gps_location_header"
+				android:id="@+id/gps_location_layout"
+				android:orientation="vertical"
 				app:layout_constraintLeft_toLeftOf="parent"
 				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
 				android:padding="@dimen/main_padding"
-				android:orientation="horizontal"
-				android:weightSum="2"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content">
+			
 			<TextView
-					android:id="@+id/gps_location_long"
-					android:layout_weight="1"
-					android:layout_width="0dp"
+					android:id="@+id/gps_location_header"
+					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:text="@string/longitude"
-					android:padding="@dimen/main_padding"
-					android:textStyle="bold"
+					android:text="@string/gps_location"
+					android:textAllCaps="true"
 					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginEnd="@dimen/text_margins"
-					android:layout_marginRight="@dimen/text_margins"
+					android:textStyle="bold"
+					android:padding="@dimen/main_padding"
 					app:layout_constraintLeft_toLeftOf="parent"
 					app:layout_constraintRight_toRightOf="parent"
 					app:layout_constraintTop_toTopOf="parent"/>
 			
-			<TextView
-					android:id="@+id/gps_location_long_value"
-					android:layout_weight="1"
-					android:layout_width="0dp"
-					android:layout_height="wrap_content"
-					android:text="@string/zero"
-					android:padding="@dimen/main_padding"
-					android:textStyle="bold"
-					android:textColor="@color/colorAccentDark"
-					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginStart="@dimen/text_margins"
-					android:layout_marginLeft="@dimen/text_margins"
+			<LinearLayout
+					android:id="@+id/gps_long_location_layout"
+					app:layout_constraintTop_toBottomOf="@+id/gps_location_header"
 					app:layout_constraintLeft_toLeftOf="parent"
 					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toTopOf="parent"/>
-		</LinearLayout>
-		<LinearLayout
-				android:id="@+id/gps_lat_location_layout"
-				android:padding="@dimen/main_padding"
-				android:layout_width="match_parent"
-				android:orientation="horizontal"
-				android:weightSum="2"
-				android:layout_height="wrap_content">
-			<TextView
-					android:id="@+id/gps_location_lat"
-					android:layout_weight="1"
-					android:layout_width="0dp"
-					android:layout_height="wrap_content"
-					android:text="@string/latitude"
 					android:padding="@dimen/main_padding"
-					android:textStyle="bold"
-					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginEnd="@dimen/text_margins"
-					android:layout_marginRight="@dimen/text_margins"
-					app:layout_constraintLeft_toLeftOf="parent"
-					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toTopOf="parent"/>
-			
-			<TextView
-					android:id="@+id/gps_location_lat_value"
-					android:layout_weight="1"
-					android:layout_width="0dp"
-					android:text="@string/zero"
-					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:weightSum="2"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+				<TextView
+						android:id="@+id/gps_location_long"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="@string/longitude"
+						android:padding="@dimen/main_padding"
+						android:textStyle="bold"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginEnd="@dimen/text_margins"
+						android:layout_marginRight="@dimen/text_margins"
+						app:layout_constraintLeft_toLeftOf="parent"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+				
+				<TextView
+						android:id="@+id/gps_location_long_value"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="@string/zero"
+						android:padding="@dimen/main_padding"
+						android:textStyle="bold"
+						android:textColor="@color/colorAccentDark"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginStart="@dimen/text_margins"
+						android:layout_marginLeft="@dimen/text_margins"
+						app:layout_constraintLeft_toLeftOf="parent"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+			</LinearLayout>
+			<LinearLayout
+					android:id="@+id/gps_lat_location_layout"
 					android:padding="@dimen/main_padding"
-					android:textStyle="bold"
-					android:textColor="@color/colorAccentDark"
-					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginStart="@dimen/text_margins"
-					android:layout_marginLeft="@dimen/text_margins"
-					app:layout_constraintLeft_toRightOf="@id/gps_location_lat"
-					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toTopOf="parent"/>
+					android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:weightSum="2"
+					android:layout_height="wrap_content">
+				<TextView
+						android:id="@+id/gps_location_lat"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="@string/latitude"
+						android:padding="@dimen/main_padding"
+						android:textStyle="bold"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginEnd="@dimen/text_margins"
+						android:layout_marginRight="@dimen/text_margins"
+						app:layout_constraintLeft_toLeftOf="parent"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+				
+				<TextView
+						android:id="@+id/gps_location_lat_value"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:text="@string/zero"
+						android:layout_height="wrap_content"
+						android:padding="@dimen/main_padding"
+						android:textStyle="bold"
+						android:textColor="@color/colorAccentDark"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginStart="@dimen/text_margins"
+						android:layout_marginLeft="@dimen/text_margins"
+						app:layout_constraintLeft_toRightOf="@id/gps_location_lat"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+			</LinearLayout>
 		</LinearLayout>
-	</LinearLayout>
-	<View
-			android:id="@+id/gps_location_divider"
-			app:layout_constraintLeft_toLeftOf="parent"
-			app:layout_constraintRight_toRightOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/gps_location_layout"
-			android:layout_width="match_parent"
-			android:layout_height="1dp"
-			android:background="@color/colorPrimaryDark"/>
-	<LinearLayout
-			android:id="@+id/network_location_layout"
-			android:orientation="vertical"
-			app:layout_constraintLeft_toLeftOf="parent"
-			app:layout_constraintRight_toRightOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/gps_location_divider"
-			android:padding="@dimen/main_padding"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
-		
-		<TextView
-				android:id="@+id/network_location_header"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:text="@string/network_location"
-				android:textAllCaps="true"
-				android:textSize="@dimen/main_header_text_size"
-				android:textStyle="bold"
-				android:padding="@dimen/main_padding"
+		<View
+				android:id="@+id/gps_location_divider"
 				app:layout_constraintLeft_toLeftOf="parent"
 				app:layout_constraintRight_toRightOf="parent"
-				app:layout_constraintTop_toTopOf="parent"/>
-		
+				app:layout_constraintTop_toBottomOf="@+id/gps_location_layout"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorPrimaryDark"/>
 		<LinearLayout
-				android:id="@+id/network_long_location_layout"
-				app:layout_constraintTop_toBottomOf="@+id/gps_location_header"
+				android:id="@+id/network_location_layout"
+				android:orientation="vertical"
 				app:layout_constraintLeft_toLeftOf="parent"
 				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/gps_location_divider"
 				android:padding="@dimen/main_padding"
-				android:orientation="horizontal"
-				android:weightSum="2"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content">
+			
 			<TextView
-					android:id="@+id/network_location_long"
-					android:layout_weight="1"
-					android:layout_width="0dp"
+					android:id="@+id/network_location_header"
+					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:text="@string/longitude"
-					android:padding="@dimen/main_padding"
-					android:textStyle="bold"
+					android:text="@string/network_location"
+					android:textAllCaps="true"
 					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginEnd="@dimen/text_margins"
-					android:layout_marginRight="@dimen/text_margins"
+					android:textStyle="bold"
+					android:padding="@dimen/main_padding"
 					app:layout_constraintLeft_toLeftOf="parent"
 					app:layout_constraintRight_toRightOf="parent"
 					app:layout_constraintTop_toTopOf="parent"/>
 			
-			<TextView
-					android:id="@+id/network_location_long_value"
-					android:layout_weight="1"
-					android:layout_width="0dp"
-					android:layout_height="wrap_content"
-					android:padding="@dimen/main_padding"
-					android:text="@string/zero"
-					android:textStyle="bold"
-					android:textColor="@color/colorAccentDark"
-					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginStart="@dimen/text_margins"
-					android:layout_marginLeft="@dimen/text_margins"
+			<LinearLayout
+					android:id="@+id/network_long_location_layout"
+					app:layout_constraintTop_toBottomOf="@+id/gps_location_header"
 					app:layout_constraintLeft_toLeftOf="parent"
 					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toTopOf="parent"/>
-		</LinearLayout>
-		<LinearLayout
-				android:id="@+id/network_lat_location_layout"
-				android:padding="@dimen/main_padding"
-				android:layout_width="match_parent"
-				android:orientation="horizontal"
-				android:weightSum="2"
-				android:layout_height="wrap_content">
-			<TextView
-					android:id="@+id/network_location_lat"
-					android:layout_weight="1"
-					android:layout_width="0dp"
-					android:layout_height="wrap_content"
-					android:text="@string/latitude"
 					android:padding="@dimen/main_padding"
-					android:textStyle="bold"
-					android:layout_marginEnd="@dimen/text_margins"
-					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginRight="@dimen/text_margins"
-					app:layout_constraintLeft_toLeftOf="parent"
-					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toTopOf="parent"/>
-			
-			<TextView
-					android:id="@+id/network_location_lat_value"
-					android:layout_weight="1"
-					android:layout_width="0dp"
-					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:weightSum="2"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+				<TextView
+						android:id="@+id/network_location_long"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="@string/longitude"
+						android:padding="@dimen/main_padding"
+						android:textStyle="bold"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginEnd="@dimen/text_margins"
+						android:layout_marginRight="@dimen/text_margins"
+						app:layout_constraintLeft_toLeftOf="parent"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+				
+				<TextView
+						android:id="@+id/network_location_long_value"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:padding="@dimen/main_padding"
+						android:text="@string/zero"
+						android:textStyle="bold"
+						android:textColor="@color/colorAccentDark"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginStart="@dimen/text_margins"
+						android:layout_marginLeft="@dimen/text_margins"
+						app:layout_constraintLeft_toLeftOf="parent"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+			</LinearLayout>
+			<LinearLayout
+					android:id="@+id/network_lat_location_layout"
 					android:padding="@dimen/main_padding"
-					android:text="@string/zero"
-					android:textStyle="bold"
-					android:textColor="@color/colorAccentDark"
-					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginStart="@dimen/text_margins"
-					android:layout_marginLeft="@dimen/text_margins"
-					app:layout_constraintLeft_toRightOf="@id/gps_location_lat"
-					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toTopOf="parent"/>
+					android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:weightSum="2"
+					android:layout_height="wrap_content">
+				<TextView
+						android:id="@+id/network_location_lat"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="@string/latitude"
+						android:padding="@dimen/main_padding"
+						android:textStyle="bold"
+						android:layout_marginEnd="@dimen/text_margins"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginRight="@dimen/text_margins"
+						app:layout_constraintLeft_toLeftOf="parent"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+				
+				<TextView
+						android:id="@+id/network_location_lat_value"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:padding="@dimen/main_padding"
+						android:text="@string/zero"
+						android:textStyle="bold"
+						android:textColor="@color/colorAccentDark"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginStart="@dimen/text_margins"
+						android:layout_marginLeft="@dimen/text_margins"
+						app:layout_constraintLeft_toRightOf="@id/gps_location_lat"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+			</LinearLayout>
 		</LinearLayout>
-	</LinearLayout>
-	<View
-			android:id="@+id/network_location_divider"
-			app:layout_constraintLeft_toLeftOf="parent"
-			app:layout_constraintRight_toRightOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/network_location_layout"
-			android:layout_width="match_parent"
-			android:layout_height="1dp"
-			android:background="@color/colorPrimaryDark"/>
-	<LinearLayout
-			android:id="@+id/best_location_layout"
-			android:orientation="vertical"
-			app:layout_constraintLeft_toLeftOf="parent"
-			app:layout_constraintRight_toRightOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/network_location_divider"
-			android:padding="@dimen/main_padding"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
-		
-		<TextView
-				android:id="@+id/best_location_header"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:text="@string/best_location"
-				android:textAllCaps="true"
-				android:textSize="@dimen/main_header_text_size"
-				android:textStyle="bold"
-				android:padding="@dimen/main_padding"
+		<View
+				android:id="@+id/network_location_divider"
 				app:layout_constraintLeft_toLeftOf="parent"
 				app:layout_constraintRight_toRightOf="parent"
-				app:layout_constraintTop_toTopOf="parent"/>
-		
+				app:layout_constraintTop_toBottomOf="@+id/network_location_layout"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/colorPrimaryDark"/>
 		<LinearLayout
-				android:id="@+id/best_long_location_layout"
-				app:layout_constraintTop_toBottomOf="@+id/best_location_header"
+				android:id="@+id/best_location_layout"
+				android:orientation="vertical"
 				app:layout_constraintLeft_toLeftOf="parent"
 				app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/network_location_divider"
 				android:padding="@dimen/main_padding"
-				android:orientation="horizontal"
-				android:weightSum="2"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content">
+			
 			<TextView
-					android:id="@+id/best_location_long"
-					android:layout_weight="1"
-					android:layout_width="0dp"
+					android:id="@+id/best_location_header"
+					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:text="@string/longitude"
-					android:padding="@dimen/main_padding"
-					android:textStyle="bold"
+					android:text="@string/best_location"
+					android:textAllCaps="true"
 					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginEnd="@dimen/text_margins"
-					android:layout_marginRight="@dimen/text_margins"
+					android:textStyle="bold"
+					android:padding="@dimen/main_padding"
 					app:layout_constraintLeft_toLeftOf="parent"
 					app:layout_constraintRight_toRightOf="parent"
 					app:layout_constraintTop_toTopOf="parent"/>
 			
-			<TextView
-					android:id="@+id/best_location_long_value"
-					android:layout_weight="1"
-					android:layout_width="0dp"
-					android:layout_height="wrap_content"
-					android:padding="@dimen/main_padding"
-					android:text="@string/zero"
-					android:textStyle="bold"
-					android:textSize="@dimen/main_header_text_size"
-					android:textColor="@color/colorAccentDark"
-					android:layout_marginStart="@dimen/text_margins"
-					android:layout_marginLeft="@dimen/text_margins"
+			<LinearLayout
+					android:id="@+id/best_long_location_layout"
+					app:layout_constraintTop_toBottomOf="@+id/best_location_header"
 					app:layout_constraintLeft_toLeftOf="parent"
 					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toTopOf="parent"/>
-		</LinearLayout>
-		<LinearLayout
-				android:id="@+id/best_lat_location_layout"
-				android:padding="@dimen/main_padding"
-				android:layout_width="match_parent"
-				android:orientation="horizontal"
-				android:weightSum="2"
-				android:layout_height="wrap_content">
-			<TextView
-					android:id="@+id/best_location_lat"
-					android:layout_weight="1"
-					android:layout_width="0dp"
-					android:layout_height="wrap_content"
-					android:text="@string/latitude"
 					android:padding="@dimen/main_padding"
-					android:layout_marginEnd="@dimen/text_margins"
-					android:textStyle="bold"
-					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginRight="@dimen/text_margins"
-					app:layout_constraintLeft_toLeftOf="parent"
-					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toTopOf="parent"/>
-			
-			<TextView
-					android:id="@+id/best_location_lat_value"
-					android:layout_weight="1"
-					android:layout_width="0dp"
-					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:weightSum="2"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+				<TextView
+						android:id="@+id/best_location_long"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="@string/longitude"
+						android:padding="@dimen/main_padding"
+						android:textStyle="bold"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginEnd="@dimen/text_margins"
+						android:layout_marginRight="@dimen/text_margins"
+						app:layout_constraintLeft_toLeftOf="parent"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+				
+				<TextView
+						android:id="@+id/best_location_long_value"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:padding="@dimen/main_padding"
+						android:text="@string/zero"
+						android:textStyle="bold"
+						android:textSize="@dimen/main_header_text_size"
+						android:textColor="@color/colorAccentDark"
+						android:layout_marginStart="@dimen/text_margins"
+						android:layout_marginLeft="@dimen/text_margins"
+						app:layout_constraintLeft_toLeftOf="parent"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+			</LinearLayout>
+			<LinearLayout
+					android:id="@+id/best_lat_location_layout"
 					android:padding="@dimen/main_padding"
-					android:text="@string/zero"
-					android:textColor="@color/colorAccentDark"
-					android:textStyle="bold"
-					android:textSize="@dimen/main_header_text_size"
-					android:layout_marginStart="@dimen/text_margins"
-					android:layout_marginLeft="@dimen/text_margins"
-					app:layout_constraintLeft_toRightOf="@id/best_location_lat"
-					app:layout_constraintRight_toRightOf="parent"
-					app:layout_constraintTop_toTopOf="parent"/>
+					android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:weightSum="2"
+					android:layout_height="wrap_content">
+				<TextView
+						android:id="@+id/best_location_lat"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:text="@string/latitude"
+						android:padding="@dimen/main_padding"
+						android:layout_marginEnd="@dimen/text_margins"
+						android:textStyle="bold"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginRight="@dimen/text_margins"
+						app:layout_constraintLeft_toLeftOf="parent"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+				
+				<TextView
+						android:id="@+id/best_location_lat_value"
+						android:layout_weight="1"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:padding="@dimen/main_padding"
+						android:text="@string/zero"
+						android:textColor="@color/colorAccentDark"
+						android:textStyle="bold"
+						android:textSize="@dimen/main_header_text_size"
+						android:layout_marginStart="@dimen/text_margins"
+						android:layout_marginLeft="@dimen/text_margins"
+						app:layout_constraintLeft_toRightOf="@id/best_location_lat"
+						app:layout_constraintRight_toRightOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+			</LinearLayout>
 		</LinearLayout>
-	</LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
